@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)file:///C:/Users/david/Downloads/evidence_table_v2.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evidence Table: Gut Commensal Bacteria in IBD</title>
+<link href="./Evidence Table_ Gut Commensal Bacteria in IBD v2_files/css2" rel="stylesheet">
+<style>
+:root {
+  --pos-bg: #eaf6ee; --pos-border: #2a7a45; --pos-text: #1b5232;
+  --neg-bg: #fdecea; --neg-border: #b92020; --neg-text: #7b1515;
+  --cond-bg: #fef8e7; --cond-border: #c98d0a; --cond-text: #7a5700;
+  --ctx-bg: #edf0f2; --ctx-border: #5d7080; --ctx-text: #3a4a56;
+  --rct-bg: #e3ecf9; --rct-text: #1a3d6e;
+  --cohort-bg: #f0e9f7; --cohort-text: #4a1a7a;
+  --xsec-bg: #e5f5f2; --xsec-text: #0e5c4e;
+  --ol-bg: #f7ece1; --ol-text: #7a3d0e;
+  --cs-bg: #eef0f2; --cs-text: #45535e;
+  --navy: #1a2740; --off-white: #f8f7f4; --light-border: #dde1e7;
+  --table-stripe: #f3f4f6;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'IBM Plex Sans', sans-serif; background: var(--off-white); color: var(--navy); font-size: 13px; line-height: 1.5; }
+
+/* HEADER */
+.page-header { background: var(--navy); color: #fff; padding: 28px 36px 24px; border-bottom: 3px solid #c98d0a; }
+.page-header h1 { font-family: 'EB Garamond', serif; font-size: 22px; font-weight: 600; letter-spacing: 0.3px; margin-bottom: 4px; }
+.page-header p { font-size: 12px; color: #bfc8d8; font-weight: 300; margin-bottom: 10px; }
+.header-meta { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 10px; }
+.header-meta span { font-size: 11px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 3px 10px; border-radius: 3px; color: #d0d9e8; }
+
+/* LEGEND */
+.legend-bar { background: #fff; border-bottom: 1px solid var(--light-border); padding: 12px 36px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.legend-bar span { font-size: 11px; font-weight: 500; color: #666; margin-right: 4px; }
+.tag { display: inline-block; padding: 2px 7px; border-radius: 3px; font-size: 10.5px; font-weight: 500; white-space: nowrap; border-width: 1px; border-style: solid; }
+.pos { background: var(--pos-bg); border-color: var(--pos-border); color: var(--pos-text); }
+.neg { background: var(--neg-bg); border-color: var(--neg-border); color: var(--neg-text); }
+.cond { background: var(--cond-bg); border-color: var(--cond-border); color: var(--cond-text); }
+.ctx { background: var(--ctx-bg); border-color: var(--ctx-border); color: var(--ctx-text); }
+
+/* FILTERS */
+.filter-bar { padding: 12px 36px; background: #fff; border-bottom: 1px solid var(--light-border); display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.filter-label { font-size: 11px; font-weight: 600; color: #888; text-transform: uppercase; letter-spacing: 0.5px; margin-right: 4px; }
+.filter-btn { padding: 4px 11px; border-radius: 3px; border: 1px solid #c8cdd4; background: #fff; font-size: 11px; font-weight: 500; cursor: pointer; color: #445; transition: all 0.15s; font-family: 'IBM Plex Sans', sans-serif; }
+.filter-btn:hover { border-color: var(--navy); color: var(--navy); }
+.filter-btn.active { background: var(--navy); border-color: var(--navy); color: #fff; }
+.filter-sep { width: 1px; height: 18px; background: #dde1e7; margin: 0 4px; }
+
+/* STATS BAR */
+.stats-bar { padding: 6px 36px; background: var(--off-white); border-bottom: 1px solid var(--light-border); font-size: 11px; color: #777; }
+#result-count { font-weight: 600; color: var(--navy); }
+
+/* TABLE WRAPPER */
+.table-wrap { overflow-x: auto; padding: 0 36px 36px; margin-top: 0; }
+table { width: 100%; border-collapse: collapse; margin-top: 16px; background: #fff; border: 1px solid var(--light-border); border-radius: 4px; overflow: hidden; box-shadow: 0 1px 6px rgba(0,0,0,0.06); }
+thead { background: var(--navy); color: #fff; }
+thead th { padding: 11px 12px; text-align: left; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; white-space: nowrap; }
+thead th:first-child { border-radius: 4px 0 0 0; }
+thead th:last-child { border-radius: 0 4px 0 0; }
+tbody tr { border-bottom: 1px solid var(--light-border); transition: background 0.1s; }
+tbody tr:last-child { border-bottom: none; }
+tbody tr:nth-child(even) { background: var(--table-stripe); }
+tbody tr:hover { background: #edf1f7; }
+tbody tr.hidden { display: none; }
+td { padding: 10px 12px; vertical-align: top; }
+
+/* COLUMN WIDTHS */
+td:nth-child(1) { width: 14%; min-width: 140px; }
+td:nth-child(2) { width: 12%; min-width: 120px; }
+td:nth-child(3) { width: 30%; min-width: 260px; }
+td:nth-child(4) { width: 20%; min-width: 180px; }
+td:nth-child(5) { width: 24%; min-width: 200px; }
+
+/* STUDY CHARACTERISTICS CELL */
+.study-authors { font-family: 'EB Garamond', serif; font-size: 13.5px; font-weight: 600; color: var(--navy); line-height: 1.3; margin-bottom: 2px; }
+.study-journal { font-size: 11px; color: #666; font-style: italic; margin-bottom: 3px; }
+.study-loc { font-size: 10.5px; color: #888; }
+.study-id { font-size: 10px; color: #aaa; margin-top: 2px; font-family: monospace; }
+
+/* POPULATION CELL */
+.pop-type { display: inline-block; padding: 2px 7px; border-radius: 3px; font-size: 10.5px; font-weight: 600; margin-bottom: 4px; }
+.pop-uc { background: var(--rct-bg); color: var(--rct-text); border: 1px solid #a8c0e8; }
+.pop-cd { background: var(--cohort-bg); color: var(--cohort-text); border: 1px solid #c9a8e8; }
+.pop-ibd { background: var(--xsec-bg); color: var(--xsec-text); border: 1px solid #8cd0c5; }
+.pop-n { font-size: 11.5px; font-weight: 500; color: var(--navy); margin-bottom: 2px; }
+.pop-age { font-size: 11px; color: #666; }
+.pop-activity { font-size: 11px; color: #555; margin-top: 2px; }
+
+/* TAXA CELL */
+.taxa-group { margin-bottom: 5px; }
+.taxa-group:last-child { margin-bottom: 0; }
+.taxa-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; color: #888; display: block; margin-bottom: 2px; }
+.taxa-tags { display: flex; flex-wrap: wrap; gap: 3px; }
+
+/* DESIGN CELL */
+.design-badge { display: inline-block; padding: 2px 7px; border-radius: 3px; font-size: 10.5px; font-weight: 600; margin-bottom: 4px; }
+.badge-rct { background: var(--rct-bg); color: var(--rct-text); border: 1px solid #a8c0e8; }
+.badge-cohort { background: var(--cohort-bg); color: var(--cohort-text); border: 1px solid #c9a8e8; }
+.badge-xsec { background: var(--xsec-bg); color: var(--xsec-text); border: 1px solid #8cd0c5; }
+.badge-ol { background: var(--ol-bg); color: var(--ol-text); border: 1px solid #e8c0a8; }
+.badge-cs { background: var(--cs-bg); color: var(--cs-text); border: 1px solid #b8c0c8; }
+.badge-meta { background: #fef5e7; color: #7a4d00; border: 1px solid #e8c880; }
+.design-desc { font-size: 11.5px; color: #445; line-height: 1.4; }
+
+/* OUTCOMES CELL */
+.outcome-main { font-size: 12px; color: var(--navy); line-height: 1.45; margin-bottom: 3px; }
+.outcome-stat { font-size: 11px; font-style: italic; color: #5a6a7a; margin-top: 2px; }
+.outcome-note { font-size: 10.5px; color: #888; background: var(--ctx-bg); border: 1px solid #d0d7de; padding: 2px 6px; border-radius: 3px; margin-top: 4px; display: inline-block; }
+
+/* PILOT / COMPANION NOTE */
+.companion-note { font-size: 10px; color: #c98d0a; background: #fef8e7; border: 1px solid #e8c880; padding: 1px 5px; border-radius: 2px; margin-top: 2px; display: inline-block; }
+
+/* SCROLL INDICATOR */
+.scroll-hint { text-align: center; padding: 6px; font-size: 11px; color: #aaa; background: #fff; border-top: 1px solid var(--light-border); }
+
+/* PRINT */
+@media print {
+  .filter-bar, .legend-bar, .stats-bar, .scroll-hint { display: none; }
+  .table-wrap { padding: 0; }
+  body { font-size: 10px; }
+  .page-header { padding: 12px 16px; }
+}
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <h1>Evidence Table: Classifying Gut Commensal Bacteria as Beneficial, Harmful, or Opportunistic in IBD</h1>
+  <p>Systematic extraction from human clinical studies — IBD (Ulcerative Colitis and Crohn's Disease) | Level 6 Dissertation</p>
+  <div class="header-meta">
+    <span>n = 52 studies</span>
+    <span>2006–2026</span>
+    <span>UC · CD · Paediatric · Adult</span>
+    <span>RCT · Cohort · Cross-sectional · Open-label</span>
+  </div>
+</div>
+
+<div class="legend-bar">
+  <span>Taxon colour key:</span>
+  <span class="tag pos">■ Beneficial / Positive</span>
+  <span class="tag neg">■ Harmful / Disease-associated</span>
+  <span class="tag cond">■ Conditional / Opportunistic</span>
+  <span class="tag ctx">■ Contextual / Methodological</span>
+</div>
+
+<div class="filter-bar">
+  <span class="filter-label">IBD Type:</span>
+  <button class="filter-btn active" onclick="filter(&#39;type&#39;,&#39;all&#39;)">All</button>
+  <button class="filter-btn" onclick="filter(&#39;type&#39;,&#39;UC&#39;)">UC</button>
+  <button class="filter-btn" onclick="filter(&#39;type&#39;,&#39;CD&#39;)">CD</button>
+  <button class="filter-btn" onclick="filter(&#39;type&#39;,&#39;IBD&#39;)">UC + CD</button>
+  <div class="filter-sep"></div>
+  <span class="filter-label">Design:</span>
+  <button class="filter-btn active" onclick="filter(&#39;design&#39;,&#39;all&#39;)">All</button>
+  <button class="filter-btn" onclick="filter(&#39;design&#39;,&#39;RCT&#39;)">RCT</button>
+  <button class="filter-btn" onclick="filter(&#39;design&#39;,&#39;Cohort&#39;)">Cohort</button>
+  <button class="filter-btn" onclick="filter(&#39;design&#39;,&#39;Cross-sectional&#39;)">Cross-sectional</button>
+  <button class="filter-btn" onclick="filter(&#39;design&#39;,&#39;Open-label&#39;)">Open-label</button>
+  <div class="filter-sep"></div>
+  <span class="filter-label">Age:</span>
+  <button class="filter-btn active" onclick="filter(&#39;age&#39;,&#39;all&#39;)">All</button>
+  <button class="filter-btn" onclick="filter(&#39;age&#39;,&#39;adult&#39;)">Adult</button>
+  <button class="filter-btn" onclick="filter(&#39;age&#39;,&#39;paediatric&#39;)">Paediatric</button>
+</div>
+
+<div class="stats-bar">Showing <span id="result-count">52</span> of 52 studies</div>
+
+<div class="table-wrap">
+<table id="evidence-table">
+<thead>
+<tr>
+  <th>Study Characteristics</th>
+  <th>Population Health Status</th>
+  <th>Bacterial Taxa Investigated</th>
+  <th>Study Design</th>
+  <th>Health Outcomes</th>
+</tr>
+</thead>
+<tbody>
+
+<!-- ROW 1 -->
+<tr data-type="UC" data-design="RCT" data-age="adult">
+<td>
+  <div class="study-authors">Henn et al.</div>
+  <div class="study-journal">Gastroenterology, 2020</div>
+  <div class="study-loc">USA (multi-site)</div>
+  <div class="study-id">PMC7402096</div>
+</td>
+<td>
+  <span class="pop-type pop-uc">UC</span>
+  <div class="pop-n">n = 58</div>
+  <div class="pop-age">Adults</div>
+  <div class="pop-activity">Mild–moderate active</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Beneficial</span><div class="taxa-tags"><span class="tag pos">F. prausnitzii</span><span class="tag pos">Clostridium spp.</span><span class="tag pos">Gemmiger</span><span class="tag pos">Dorea</span><span class="tag pos">Roseburia</span><span class="tag pos">Blautia</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Harmful</span><div class="taxa-tags"><span class="tag neg">Klebsiella</span><span class="tag neg">Proteus</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-rct">Phase 1b RCT</span>
+  <div class="design-desc">SER-287 (oral Firmicutes spore preparation) vs placebo; vancomycin preconditioning protocol prior to intervention; 16S rRNA profiling</div>
+</td>
+<td>
+  <div class="outcome-main">32% clinical remission with SER-287 vs placebo. Vancomycin preconditioning required for engraftment of Firmicutes spores.</div>
+  <div class="outcome-stat">Beneficial taxa enriched in remission; Klebsiella and Proteus reduced in responders</div>
+</td>
+</tr>
+
+<!-- ROW 2 -->
+<tr data-type="IBD" data-design="RCT" data-age="adult">
+<td>
+  <div class="study-authors">Marsh et al.</div>
+  <div class="study-journal">Eur J Clin Nutr, 2024</div>
+  <div class="study-loc">Australia</div>
+  <div class="study-id">PMC11611722</div>
+</td>
+<td>
+  <span class="pop-type pop-ibd">UC + CD</span>
+  <div class="pop-n">n = 58</div>
+  <div class="pop-age">Adults</div>
+  <div class="pop-activity">Active disease</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Contextual (no significant change)</span><div class="taxa-tags"><span class="tag ctx">Bacteroides</span><span class="tag ctx">F. prausnitzii</span><span class="tag ctx">Blautia</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-rct">Pilot RCT</span>
+  <div class="design-desc">IBD-MAID diet (food additive reduction) vs healthy eating advice; 16S rRNA; fecal calprotectin; QoL assessment</div>
+</td>
+<td>
+  <div class="outcome-main">No significant microbiome composition change detected. Food additive reduction correlated with improved fecal calprotectin and QoL.</div>
+  <div class="outcome-note">Dietary confounders may mask microbiome signal</div>
+</td>
+</tr>
+
+<!-- ROW 3 -->
+<tr data-type="CD" data-design="RCT" data-age="adult">
+<td>
+  <div class="study-authors">Lewis et al.</div>
+  <div class="study-journal">Gastroenterology, 2021</div>
+  <div class="study-loc">USA (DINE-CD trial)</div>
+  <div class="study-id">PMC8396394</div>
+</td>
+<td>
+  <span class="pop-type pop-cd">CD</span>
+  <div class="pop-n">n = 191</div>
+  <div class="pop-age">Adults</div>
+  <div class="pop-activity">Active (CDAI ≥220)</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Beneficial</span><div class="taxa-tags"><span class="tag pos">F. prausnitzii</span><span class="tag pos">Eubacterium eligens</span><span class="tag pos">E. rectale</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Harmful</span><div class="taxa-tags"><span class="tag neg">Bacteroides vulgatus</span><span class="tag neg">Enterobacteriaceae</span><span class="tag neg">Proteobacteria</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-rct">RCT</span>
+  <div class="design-desc">Specific Carbohydrate Diet (SCD) vs Mediterranean diet; 12 weeks; 16S rRNA; CDAI; fecal calprotectin</div>
+</td>
+<td>
+  <div class="outcome-main">Neither diet superior for clinical remission. Both diets increased butyrate-producing taxa and reduced Proteobacteria similarly. SCD showed greater reduction in B. vulgatus.</div>
+  <div class="outcome-stat">SCD vs Mediterranean: remission rates not significantly different (p &gt;0.05)</div>
+</td>
+</tr>
+
+<!-- ROW 4 -->
+<tr data-type="UC" data-design="RCT" data-age="adult">
+<td>
+  <div class="study-authors">Raich et al.</div>
+  <div class="study-journal">mSystems, 2025</div>
+  <div class="study-loc">Multi-site (LOTUS trial)</div>
+  <div class="study-id">PMC12542657</div>
+</td>
+<td>
+  <span class="pop-type pop-uc">UC</span>
+  <div class="pop-n">n = 35 (FMT arm)</div>
+  <div class="pop-age">Adults</div>
+  <div class="pop-activity">Active</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Beneficial</span><div class="taxa-tags"><span class="tag pos">Clostridium SGB6179</span><span class="tag pos">Alistipes finegoldii</span><span class="tag pos">A. onderdonkii</span><span class="tag pos">F. prausnitzii</span><span class="tag pos">Blautia</span><span class="tag pos">Roseburia intestinalis</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Harmful</span><div class="taxa-tags"><span class="tag neg">Sutterella wadsworthensis</span><span class="tag neg">Eisenbergiella massiliensis</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Conditional</span><div class="taxa-tags"><span class="tag cond">Akkermansia muciniphila</span><span class="tag cond">Ruminococcus torques</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-rct">RCT Sub-study</span>
+  <div class="design-desc">Deep shotgun metagenomics of oral lyophilised FMT RCT; species-level (SGB) resolution; engraftment tracking</div>
+</td>
+<td>
+  <div class="outcome-main">Engraftment of SCFA-producing commensals associated with clinical response. A. muciniphila and R. torques (mucin degrader) showed context-dependent effects.</div>
+  <div class="outcome-stat">Species-level metagenomics provided resolution beyond 16S; engraftment predicted response</div>
+</td>
+</tr>
+
+<!-- ROW 5 -->
+<tr data-type="IBD" data-design="Cross-sectional" data-age="paediatric">
+<td>
+  <div class="study-authors">Nissilä et al.</div>
+  <div class="study-journal">Clin Exp Immunol, 2017</div>
+  <div class="study-loc">Finland</div>
+  <div class="study-id">PMC5680072</div>
+</td>
+<td>
+  <span class="pop-type pop-ibd">UC + CD</span>
+  <div class="pop-n">n = 47 + 26 controls</div>
+  <div class="pop-age">Paediatric</div>
+  <div class="pop-activity">Active + remission</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Beneficial</span><div class="taxa-tags"><span class="tag pos">Butyrate producers (Eubacterium spp.)</span><span class="tag pos">Lachnospira</span><span class="tag pos">Ruminococcus relatives</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Harmful</span><div class="taxa-tags"><span class="tag neg">Klebsiella</span><span class="tag neg">Escherichia</span><span class="tag neg">Serratia</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Conditional</span><div class="taxa-tags"><span class="tag cond">Akkermansia muciniphila (complement activation)</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-xsec">Cross-sectional + in vitro</span>
+  <div class="design-desc">Faecal microbiota + in vitro immunological assays; complement pathway analysis per taxon; 16S rRNA</div>
+</td>
+<td>
+  <div class="outcome-main">Distinct immunological responses identified per taxon. A. muciniphila activated complement pathway in IBD context — a context-specific harmful effect despite health associations in other settings.</div>
+</td>
+</tr>
+
+<!-- ROW 6 -->
+<tr data-type="UC" data-design="Cohort" data-age="paediatric">
+<td>
+  <div class="study-authors">Hyams et al.</div>
+  <div class="study-journal">Lancet, 2019</div>
+  <div class="study-loc">USA/Canada (PROTECT)</div>
+  <div class="study-id">PMC6501846</div>
+</td>
+<td>
+  <span class="pop-type pop-uc">UC</span>
+  <div class="pop-n">n = 428</div>
+  <div class="pop-age">Paediatric (new onset)</div>
+  <div class="pop-activity">Active, newly diagnosed</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Beneficial (remission-associated)</span><div class="taxa-tags"><span class="tag pos">Ruminococcaceae OTU 560535</span><span class="tag pos">Oscillospira</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Harmful</span><div class="taxa-tags"><span class="tag neg">Sutterella OTU 589923</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-cohort">Prospective Cohort</span>
+  <div class="design-desc">Multi-centre baseline microbiome profiling at diagnosis; 1-year follow-up; 16S rRNA; PUCAI; logistic regression/AUC modelling</div>
+</td>
+<td>
+  <div class="outcome-main">Microbial taxa added predictive value for 1-year remission. Including baseline taxa improved AUC from 0.68 to 0.75.</div>
+  <div class="outcome-stat">AUC 0.68 (clinical only) → 0.75 (clinical + microbiome)</div>
+</td>
+</tr>
+
+<!-- ROW 7 -->
+<tr data-type="UC" data-design="RCT" data-age="adult">
+<td>
+  <div class="study-authors">Wang et al.</div>
+  <div class="study-journal">Saudi J Gastroenterol, 2021</div>
+  <div class="study-loc">China</div>
+  <div class="study-id">PMC8265401</div>
+</td>
+<td>
+  <span class="pop-type pop-uc">UC</span>
+  <div class="pop-n">n = 40</div>
+  <div class="pop-age">Adults</div>
+  <div class="pop-activity">Active</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Beneficial (restored by UDCA)</span><div class="taxa-tags"><span class="tag pos">Firmicutes (phylum)</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Harmful</span><div class="taxa-tags"><span class="tag neg">Proteobacteria (phylum)</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Contextual (phylum-level resolution only)</span><div class="taxa-tags"><span class="tag ctx">F/B ratio metric</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-rct">RCT</span>
+  <div class="design-desc">UDCA + mesalazine vs mesalazine alone; phylum-level 16S profiling; clinical scoring (Mayo)</div>
+</td>
+<td>
+  <div class="outcome-main">Combination improved clinical scores and Firmicutes/Proteobacteria ratio. Limited taxa resolution (phylum level only).</div>
+  <div class="outcome-note">Phylum-level data only — limited mechanistic inference</div>
+</td>
+</tr>
+
+<!-- ROW 8 -->
+<tr data-type="CD" data-design="Open-label" data-age="adult">
+<td>
+  <div class="study-authors">Lindsay et al.</div>
+  <div class="study-journal">Gut, 2006</div>
+  <div class="study-loc">UK</div>
+  <div class="study-id">PMC1856087</div>
+</td>
+<td>
+  <span class="pop-type pop-cd">CD</span>
+  <div class="pop-n">n = 10</div>
+  <div class="pop-age">Adults</div>
+  <div class="pop-activity">Active</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Beneficial (prebiotic-stimulated)</span><div class="taxa-tags"><span class="tag pos">Bifidobacterium spp.</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-ol">Open-label Pilot</span>
+  <div class="design-desc">FOS (fructooligosaccharide) prebiotic supplementation, 15g/d × 3 weeks; FISH + flow cytometry; dendritic cell IL-10 assay</div>
+</td>
+<td>
+  <div class="outcome-main">Significant increase in Bifidobacterium correlated with increased IL-10 production by dendritic cells — anti-inflammatory immune signal. First human evidence of FOS-driven bifidogenesis in active CD.</div>
+</td>
+</tr>
+
+<!-- ROW 9 -->
+<tr data-type="UC" data-design="Cross-sectional" data-age="adult">
+<td>
+  <div class="study-authors">Kim et al.</div>
+  <div class="study-journal">BMC Gastroenterol, 2021</div>
+  <div class="study-loc">South Korea</div>
+  <div class="study-id">PMC8614001</div>
+</td>
+<td>
+  <span class="pop-type pop-uc">UC</span>
+  <div class="pop-n">n = 16 UC + 15 HC</div>
+  <div class="pop-age">Adults</div>
+  <div class="pop-activity">Active + healthy controls</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Conditional (UC-elevated in stool)</span><div class="taxa-tags"><span class="tag cond">Enterococcus</span><span class="tag cond">Lactobacillus</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Beneficial (healthy stool markers)</span><div class="taxa-tags"><span class="tag pos">Prevotella</span><span class="tag pos">Bacteroides</span><span class="tag pos">Clostridiales</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Harmful (lavage disease markers)</span><div class="taxa-tags"><span class="tag neg">Staphylococcus</span><span class="tag neg">Leuconostocaceae</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Conditional (elevated across all sample types in UC)</span><div class="taxa-tags"><span class="tag cond">Akkermansia muciniphila</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-xsec">Cross-sectional (Methodological)</span>
+  <div class="design-desc">Head-to-head comparison of stool vs colonic lavage vs biopsy sampling; 16S rRNA; AUC analysis for biomarker discrimination</div>
+</td>
+<td>
+  <div class="outcome-main">Sampling method substantially affects taxa detected. Stool AUC = 0.85; lavage AUC = 0.81 for UC biomarkers. Enterococcus and Lactobacillus elevated in UC stool — important conditional classification finding.</div>
+  <div class="outcome-note">KEY: stool ≠ lavage ≠ biopsy for taxa profiles</div>
+</td>
+</tr>
+
+<!-- ROW 10 -->
+<tr data-type="CD" data-design="RCT" data-age="adult">
+<td>
+  <div class="study-authors">Shen et al.</div>
+  <div class="study-journal">J Investig Surg, 2024</div>
+  <div class="study-loc">China</div>
+  <div class="study-id">doi:10.1080/08941939</div>
+</td>
+<td>
+  <span class="pop-type pop-cd">CD</span>
+  <div class="pop-n">n = 96</div>
+  <div class="pop-age">Adults</div>
+  <div class="pop-activity">Mild active</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Beneficial (probiotic strains)</span><div class="taxa-tags"><span class="tag pos">L. acidophilus</span><span class="tag pos">B. longum</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Harmful (reduced with treatment)</span><div class="taxa-tags"><span class="tag neg">Bacteroides vulgatus</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-rct">RCT</span>
+  <div class="design-desc">Mesalamine + probiotic capsules (Bifidobacterium + Lactobacillus + Enterococcus) vs mesalamine alone; 8 weeks; CDAI; fecal microbiota profiling</div>
+</td>
+<td>
+  <div class="outcome-main">Combination therapy produced significantly higher effective rate and reduced B. vulgatus.</div>
+  <div class="outcome-stat">97.91% (combination) vs 85.42% (mesalamine alone) effective rate</div>
+</td>
+</tr>
+
+<!-- ROW 11 -->
+<tr data-type="UC" data-design="Cross-sectional" data-age="adult">
+<td>
+  <div class="study-authors">Fukuda &amp; Fujita</div>
+  <div class="study-journal">BMC Gastroenterol, 2014</div>
+  <div class="study-loc">Japan</div>
+  <div class="study-id">PMC3999879</div>
+</td>
+<td>
+  <span class="pop-type pop-uc">UC</span>
+  <div class="pop-n">n = 69 UC + 80 controls</div>
+  <div class="pop-age">Adults</div>
+  <div class="pop-activity">Active + quiescent + relatives</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Contextual (community fingerprinting — no genus-level detail)</span><div class="taxa-tags"><span class="tag ctx">T-RFLP discriminant score (Ds)</span><span class="tag ctx">Community-level diversity metric</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-xsec">Cross-sectional (Biomarker Development)</span>
+  <div class="design-desc">T-RFLP community fingerprinting; discriminant score (Ds) as biomarker; gradient: active UC &gt; quiescent UC &gt; relatives &gt; non-relatives</div>
+</td>
+<td>
+  <div class="outcome-main">Microbial community structure (Ds) distinguished UC activity states and genetic susceptibility gradient. AUC 0.91 for active UC vs healthy.</div>
+  <div class="outcome-note">Community-level only — limited taxon-specific inference</div>
+</td>
+</tr>
+
+<!-- ROW 12 -->
+<tr data-type="IBD" data-design="RCT" data-age="adult">
+<td>
+  <div class="study-authors">Shadnoush et al.</div>
+  <div class="study-journal">Korean J Gastroenterol, 2015</div>
+  <div class="study-loc">Iran</div>
+  <div class="study-id">DOI:10.4166/kjg</div>
+</td>
+<td>
+  <span class="pop-type pop-ibd">UC + CD</span>
+  <div class="pop-n">n = 305</div>
+  <div class="pop-age">Adults</div>
+  <div class="pop-activity">Mixed (active + remission)</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Beneficial (significantly increased with probiotic yogurt)</span><div class="taxa-tags"><span class="tag pos">Lactobacillus spp.</span><span class="tag pos">Bifidobacterium spp.</span><span class="tag pos">Bacteroides spp.</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-rct">Double-blind RCT</span>
+  <div class="design-desc">Probiotic yogurt (L. acidophilus La-5, B. animalis Bb-12) vs control yogurt; stool culture + 16S; disease activity scoring</div>
+</td>
+<td>
+  <div class="outcome-main">All three beneficial taxa significantly increased with probiotic yogurt. Improvement in clinical activity scores in UC subgroup.</div>
+</td>
+</tr>
+
+<!-- ROW 13 -->
+<tr data-type="UC" data-design="RCT" data-age="adult">
+<td>
+  <div class="study-authors">Wagner et al.</div>
+  <div class="study-journal">Gut, 2023</div>
+  <div class="study-loc">Multi-site</div>
+  <div class="study-id">PMC10359578</div>
+</td>
+<td>
+  <span class="pop-type pop-uc">UC</span>
+  <div class="pop-n">n = 24 + 32</div>
+  <div class="pop-age">Adults</div>
+  <div class="pop-activity">Active (moderate–severe)</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Contextual (dysbiosis reversal — no specific taxa named)</span><div class="taxa-tags"><span class="tag ctx">Microbiota composition shift consistent with reduced dysbiosis</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-rct">Phase 1b RCT</span>
+  <div class="design-desc">Efmarodocokin alfa (IL-22 agonist) vs placebo; 16S profiling; mechanistic analysis of IL-22/microbiome axis</div>
+</td>
+<td>
+  <div class="outcome-main">IL-22 agonism produced microbiome changes consistent with reversal of baseline dysbiosis. Provides mechanistic insight into how mucosal cytokines shape microbial ecology.</div>
+  <div class="outcome-note">No specific taxa reported — community-level shift only</div>
+</td>
+</tr>
+
+<!-- ROW 14 -->
+<tr data-type="UC" data-design="RCT" data-age="adult">
+<td>
+  <div class="study-authors">Chu et al.</div>
+  <div class="study-journal">mBio, 2021</div>
+  <div class="study-loc">USA</div>
+  <div class="study-id">PMC8406238</div>
+</td>
+<td>
+  <span class="pop-type pop-uc">UC</span>
+  <div class="pop-n">n = 12</div>
+  <div class="pop-age">Adults</div>
+  <div class="pop-activity">Active</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Beneficial (transferred via FMT)</span><div class="taxa-tags"><span class="tag pos">Butyrate-producing commensals</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Conditional</span><div class="taxa-tags"><span class="tag cond">IgA-coated bacteria (inflammation-associated; transferable)</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Contextual (safety consideration)</span><div class="taxa-tags"><span class="tag ctx">Antibiotic resistance genes (transferred)</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-rct">RCT Sub-study</span>
+  <div class="design-desc">16S + metagenomics + IgA-seq of FMT RCT in UC; engraftment analysis; antibiotic resistance gene tracking</div>
+</td>
+<td>
+  <div class="outcome-main">IgA-coated (inflammation-associated) bacteria transferable via FMT alongside beneficial taxa. Antibiotic resistance genes also transferred — key safety consideration for FMT donor screening.</div>
+</td>
+</tr>
+
+<!-- ROW 15 -->
+<tr data-type="UC" data-design="Cohort" data-age="adult">
+<td>
+  <div class="study-authors">Pinto et al.</div>
+  <div class="study-journal">J Crohns Colitis, 2024</div>
+  <div class="study-loc">Netherlands</div>
+  <div class="study-id">PMC11836888</div>
+</td>
+<td>
+  <span class="pop-type pop-uc">UC</span>
+  <div class="pop-n">n = 24</div>
+  <div class="pop-age">Adults</div>
+  <div class="pop-activity">Active; longitudinal follow-up</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Beneficial (response-associated families)</span><div class="taxa-tags"><span class="tag pos">Ruminococcaceae</span><span class="tag pos">Lachnospiraceae</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Conditional / Harmful in FMT context</span><div class="taxa-tags"><span class="tag cond">Prevotellaceae (dominant cluster = poor response)</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-cohort">Longitudinal FMT Sub-study</span>
+  <div class="design-desc">Enterotype-based analysis; Dirichlet-Multinomial Mixture clustering; baseline microbiome predicts FMT response; 16S rRNA longitudinal tracking</div>
+</td>
+<td>
+  <div class="outcome-main">Baseline enterotype predicted FMT response. Prevotellaceae-dominant cluster associated with significantly lower remission rates. Ruminococcaceae/Lachnospiraceae cluster linked to successful engraftment and remission.</div>
+</td>
+</tr>
+
+<!-- ROW 16 -->
+<tr data-type="IBD" data-design="RCT" data-age="adult">
+<td>
+  <div class="study-authors">Yılmaz et al.</div>
+  <div class="study-journal">Turk J Gastroenterol, 2019</div>
+  <div class="study-loc">Turkey</div>
+  <div class="study-id">PMC6428516</div>
+</td>
+<td>
+  <span class="pop-type pop-ibd">UC + CD</span>
+  <div class="pop-n">n = 45</div>
+  <div class="pop-age">Adults</div>
+  <div class="pop-activity">Active</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Beneficial (increased with kefir)</span><div class="taxa-tags"><span class="tag pos">Lactobacillus spp.</span><span class="tag pos">L. kefiri</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Harmful (reduced with kefir)</span><div class="taxa-tags"><span class="tag neg">Bacteroides vulgatus</span><span class="tag neg">Fusobacterium spp.</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-rct">RCT</span>
+  <div class="design-desc">Kefir supplementation vs control × 4 weeks; stool culture + 16S; disease activity scoring (CDAI/partial Mayo)</div>
+</td>
+<td>
+  <div class="outcome-main">Significant reduction in disease activity scores. B. vulgatus and Fusobacterium significantly reduced in kefir group. Lactobacillus enrichment correlated with clinical improvement.</div>
+</td>
+</tr>
+
+<!-- ROW 17 -->
+<tr data-type="UC" data-design="RCT" data-age="adult">
+<td>
+  <div class="study-authors">Costello et al.</div>
+  <div class="study-journal">JAMA, 2019</div>
+  <div class="study-loc">Australia</div>
+  <div class="study-id">PMC6439766</div>
+</td>
+<td>
+  <span class="pop-type pop-uc">UC</span>
+  <div class="pop-n">n = 73</div>
+  <div class="pop-age">Adults</div>
+  <div class="pop-activity">Active</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Contextual (community-level shifts)</span><div class="taxa-tags"><span class="tag ctx">Increased microbial diversity (FMT)</span><span class="tag ctx">Firmicutes restoration</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-rct">RCT (multi-donor)</span>
+  <div class="design-desc">Colonoscopic FMT (multi-donor pooled) vs autologous placebo; 16S rRNA; clinical and endoscopic remission endpoints; Mayo score</div>
+</td>
+<td>
+  <div class="outcome-main">FMT induced remission in 32% vs 9% placebo. Increased microbial diversity and Firmicutes restoration in FMT arm. Higher donor diversity associated with better outcomes.</div>
+  <div class="outcome-stat">Remission: 32% FMT vs 9% placebo (p = 0.03)</div>
+</td>
+</tr>
+
+<!-- ROW 18 -->
+<tr data-type="IBD" data-design="RCT" data-age="adult">
+<td>
+  <div class="study-authors">Fan et al.</div>
+  <div class="study-journal">Turk J Gastroenterol, 2019</div>
+  <div class="study-loc">China</div>
+  <div class="study-id">PMC6699568</div>
+</td>
+<td>
+  <span class="pop-type pop-ibd">UC + CD</span>
+  <div class="pop-n">n = 40</div>
+  <div class="pop-age">Adults</div>
+  <div class="pop-activity">Active</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Beneficial (increased with combination)</span><div class="taxa-tags"><span class="tag pos">Bifidobacterium spp.</span><span class="tag pos">Lactobacillus spp.</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Harmful (reduced with combination)</span><div class="taxa-tags"><span class="tag neg">Enterobacteria</span><span class="tag neg">Enterococci</span><span class="tag neg">Saccharomyces</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-rct">RCT</span>
+  <div class="design-desc">Pentasa (mesalazine) + probiotic vs pentasa alone; stool culture; clinical scoring</div>
+</td>
+<td>
+  <div class="outcome-main">Combination therapy significantly increased Bifidobacterium and Lactobacillus while reducing enterobacteria and enterococci. Improved clinical activity scores vs mesalazine monotherapy.</div>
+</td>
+</tr>
+
+<!-- ROW 19 -->
+<tr data-type="UC" data-design="RCT" data-age="adult">
+<td>
+  <div class="study-authors">Koido et al.</div>
+  <div class="study-journal">PLOS One, 2014</div>
+  <div class="study-loc">Japan</div>
+  <div class="study-id">PMC3906066</div>
+</td>
+<td>
+  <span class="pop-type pop-uc">UC</span>
+  <div class="pop-n">n = 20</div>
+  <div class="pop-age">Adults</div>
+  <div class="pop-activity">Active</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Harmful (pathobiont targeted by antibiotics)</span><div class="taxa-tags"><span class="tag neg">Fusobacterium varium</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-rct">RCT</span>
+  <div class="design-desc">Antibiotic combination therapy (amoxicillin + tetracycline + metronidazole) vs placebo; PCR for F. varium; Mayo score; mucosal biopsy analysis</div>
+</td>
+<td>
+  <div class="outcome-main">F. varium eradication associated with clinical remission. F. varium identified as a UC pathobiont with invasive mucosal properties. 75% response rate with ATM combination.</div>
+</td>
+</tr>
+
+<!-- ROW 20 -->
+<tr data-type="CD" data-design="Open-label" data-age="paediatric">
+<td>
+  <div class="study-authors">Suskind et al.</div>
+  <div class="study-journal">Inflamm Bowel Dis, 2015</div>
+  <div class="study-loc">USA (Seattle)</div>
+  <div class="study-id">PMC4329080</div>
+</td>
+<td>
+  <span class="pop-type pop-cd">CD</span>
+  <div class="pop-n">n = 9</div>
+  <div class="pop-age">Paediatric</div>
+  <div class="pop-activity">Active</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Contextual (post-FMT donor engraftment)</span><div class="taxa-tags"><span class="tag ctx">Shift toward donor microbiome composition</span><span class="tag ctx">Increased alpha diversity</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-ol">Open-label Case Series</span>
+  <div class="design-desc">Single FMT via nasogastric tube; donor stool; 16S rRNA engraftment tracking; PCDAI; fecal calprotectin</div>
+</td>
+<td>
+  <div class="outcome-main">Donor microbiome engraftment confirmed. Clinical and fecal calprotectin improvements post-FMT. First evidence of single-dose paediatric CD FMT feasibility via nasogastric route.</div>
+</td>
+</tr>
+
+<!-- ROW 21 -->
+<tr data-type="UC" data-design="Cohort" data-age="adult">
+<td>
+  <div class="study-authors">Tian et al.</div>
+  <div class="study-journal">BMC Gastroenterol, 2019</div>
+  <div class="study-loc">China</div>
+  <div class="study-id">PMC6610864</div>
+</td>
+<td>
+  <span class="pop-type pop-uc">UC</span>
+  <div class="pop-n">n = 20</div>
+  <div class="pop-age">Adults</div>
+  <div class="pop-activity">Active</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Contextual (remission signatures identified)</span><div class="taxa-tags"><span class="tag ctx">Remission-associated bacterial signatures</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-cohort">Prospective Cohort</span>
+  <div class="design-desc">Colonoscopic FMT; 16S rRNA pre/post; Mayo score; endoscopic assessment; specific taxa signatures correlated with outcomes</div>
+</td>
+<td>
+  <div class="outcome-main">90% short-term clinical response. Specific microbial signatures at post-FMT weeks 4 and 8 predictive of sustained remission.</div>
+</td>
+</tr>
+
+<!-- ROW 22 -->
+<tr data-type="IBD" data-design="Cohort" data-age="adult">
+<td>
+  <div class="study-authors">Lu et al.</div>
+  <div class="study-journal">BMC Med, 2025</div>
+  <div class="study-loc">China (Nanjing)</div>
+  <div class="study-id">PMC12403533</div>
+</td>
+<td>
+  <span class="pop-type pop-ibd">UC + CD</span>
+  <div class="pop-n">Two prospective cohorts</div>
+  <div class="pop-age">Adults</div>
+  <div class="pop-activity">Active + bile acid malabsorption</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Beneficial (bile acid producers; restored by FMT)</span><div class="taxa-tags"><span class="tag pos">Clostridiales spp.</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-cohort">Two Prospective Cohorts</span>
+  <div class="design-desc">FMT for bile acid malabsorption in IBD; 16S rRNA + bile acid metabolomics; clinical and biochemical endpoints</div>
+</td>
+<td>
+  <div class="outcome-main">FMT improved bile acid malabsorption in IBD. Clostridiales enrichment correlated with restoration of secondary bile acid production. Highlights metabolic (not just compositional) role of commensals.</div>
+</td>
+</tr>
+
+<!-- ROW 23 -->
+<tr data-type="UC" data-design="Cohort" data-age="adult">
+<td>
+  <div class="study-authors">Schierová et al.</div>
+  <div class="study-journal">Cells, 2020</div>
+  <div class="study-loc">Czech Republic</div>
+  <div class="study-id">PMC7602113</div>
+</td>
+<td>
+  <span class="pop-type pop-uc">UC</span>
+  <div class="pop-n">n = 16</div>
+  <div class="pop-age">Adults</div>
+  <div class="pop-activity">Active left-sided UC</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Contextual (post-FMT donor microbiome shift)</span><div class="taxa-tags"><span class="tag ctx">Donor microbiome profile engraftment</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-cohort">Prospective Comparative</span>
+  <div class="design-desc">FMT vs 5-ASA enema in active left-sided UC; 16S rRNA; SCCAI; endoscopic scoring</div>
+</td>
+<td>
+  <div class="outcome-main">5-ASA enema: 50% clinical remission, no microbiome correlation. FMT: microbiome shifts toward donor profile, suggesting engraftment is key mechanism. Neither significantly superior.</div>
+</td>
+</tr>
+
+<!-- ROW 24 -->
+<tr data-type="IBD" data-design="Cohort" data-age="paediatric">
+<td>
+  <div class="study-authors">Zhang et al.</div>
+  <div class="study-journal">Sci Rep, 2024</div>
+  <div class="study-loc">USA (Boston)</div>
+  <div class="study-id">PMC11303812</div>
+</td>
+<td>
+  <span class="pop-type pop-ibd">UC + CD</span>
+  <div class="pop-n">Retrospective cohort</div>
+  <div class="pop-age">Paediatric</div>
+  <div class="pop-activity">Active; FMT recipients</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Conditional (engraftment marker — context-dependent benefit)</span><div class="taxa-tags"><span class="tag cond">Lactobacillus spp. (bloom associated with better engraftment)</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Contextual</span><div class="taxa-tags"><span class="tag ctx">Donor diversity predicts engraftment success</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-cohort">Retrospective Cohort</span>
+  <div class="design-desc">Strain-resolved FMT engraftment analysis in paediatric IBD; 16S rRNA; donor-recipient microbiome comparison; engraftment scoring</div>
+</td>
+<td>
+  <div class="outcome-main">Lactobacillus blooms post-FMT associated with superior donor engraftment success (conditional finding — bloom marker, not direct therapeutic effect). Donor microbiome diversity predicts paediatric engraftment.</div>
+</td>
+</tr>
+
+<!-- ROW 25 -->
+<tr data-type="IBD" data-design="RCT" data-age="adult">
+<td>
+  <div class="study-authors">Facchin et al.</div>
+  <div class="study-journal">Dig Liver Dis, 2026</div>
+  <div class="study-loc">Italy (Padua/Verona)</div>
+  <div class="study-id">doi:10.1016/j.dld.2025.11.014</div>
+</td>
+<td>
+  <span class="pop-type pop-ibd">CD (n=60) + UC (n=80)</span>
+  <div class="pop-n">n = 140</div>
+  <div class="pop-age">Adults (18–80)</div>
+  <div class="pop-activity">Active + remission; 90 days</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Beneficial (increased with oral butyrate in CD Enterotype 1)</span><div class="taxa-tags"><span class="tag pos">Ruminococcus spp.</span><span class="tag pos">Lachnospiraceae NK4A136</span><span class="tag pos">Eubacterium siraeum</span><span class="tag pos">E. eligens</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Harmful (reduced with oral butyrate in CD Enterotype 1)</span><div class="taxa-tags"><span class="tag neg">Escherichia-Shigella</span><span class="tag neg">Klebsiella</span><span class="tag neg">Morganella</span><span class="tag neg">Bacteroides</span><span class="tag neg">Prevotella_9</span><span class="tag neg">Bilophila</span><span class="tag neg">Fusobacterium</span><span class="tag neg">Ruminococcus gnavus group</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Contextual (response-modifier)</span><div class="taxa-tags"><span class="tag ctx">F/B ratio predicts butyrate responsiveness</span><span class="tag ctx">Enterotype 1 (low F/B) — most responsive</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-rct">Double-blind RCT</span>
+  <div class="design-desc">Oral microencapsulated sodium butyrate (BLM 1200mg/d) vs placebo × 90 days; 16S rRNA V3-V4 (DADA2/SILVA); fecal calprotectin; partial Mayo; HBI; IBDQ-32; enterotype stratification (DMM model)</div>
+</td>
+<td>
+  <div class="outcome-main">CD: fecal calprotectin significantly reduced (p=0.047); clinical disease activity improved (p=0.013). QoL improved in both CD (p&lt;0.001) and UC (p=0.003). CD Enterotype 1 (low F/B ratio) showed greatest microbiome and clinical response.</div>
+  <div class="outcome-stat">F/B ratio: 0.31→0.69 in CD-E1 responders (p=0.039); IBDQ 164→200 (p=0.001)</div>
+  <div class="outcome-note">KEY: Baseline enterotype stratification predicts SCFA treatment response</div>
+</td>
+</tr>
+
+<!-- ROW 26 -->
+<tr data-type="UC" data-design="Open-label" data-age="adult">
+<td>
+  <div class="study-authors">Wilson et al.</div>
+  <div class="study-journal">Nutrients, 2021</div>
+  <div class="study-loc">UK (King's College London)</div>
+  <div class="study-id">PMC (nutrients-13-03598)</div>
+</td>
+<td>
+  <span class="pop-type pop-uc">UC</span>
+  <div class="pop-n">n = 17 (ITT); n = 13 (PP)</div>
+  <div class="pop-age">Adults (16–65)</div>
+  <div class="pop-activity">Mildly active (SCCAI &gt;0)</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Conditional (bifidogenesis in SCCAI ≤2 only)</span><div class="taxa-tags"><span class="tag cond">Bifidobacterium (1.05%→3.99%, p=0.046; remission subgroup only)</span><span class="tag cond">Christensenellaceae (p=0.043; remission subgroup only)</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Contextual (whole cohort — non-significant)</span><div class="taxa-tags"><span class="tag ctx">Oscillospira (reduced)</span><span class="tag ctx">Dialister (reduced)</span><span class="tag ctx">Anaerostipes (increased)</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-ol">Open-label Pilot (no control)</span>
+  <div class="design-desc">GOS prebiotic (2.8g/d Bimuno-GOS) × 6 weeks; 16S rRNA (USEARCH/Greengenes); fecal calprotectin; SCCAI; GSRS; peripheral blood gene expression microarray (Affymetrix HTA 2.0)</div>
+</td>
+<td>
+  <div class="outcome-main">No effect on calprotectin or SCCAI overall. Bifidobacterium bifidogenesis only demonstrated in less-active disease (SCCAI ≤2). Stool normalisation and reduced urgency. Gene expression changes did not survive FDR correction.</div>
+  <div class="outcome-note">KEY: Prebiotic response is disease-activity-dependent — inflamed gut may not support bifidogenesis</div>
+</td>
+</tr>
+
+<!-- ROW 27 -->
+<tr data-type="UC" data-design="Cohort" data-age="adult">
+<td>
+  <div class="study-authors">Fang et al.</div>
+  <div class="study-journal">Microb Cell Fact, 2021</div>
+  <div class="study-loc">China (Hefei)</div>
+  <div class="study-id">PMC7816432</div>
+</td>
+<td>
+  <span class="pop-type pop-uc">UC</span>
+  <div class="pop-n">Pilot cohort (FMT)</div>
+  <div class="pop-age">Adults</div>
+  <div class="pop-activity">Recurrent active UC</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Contextual (long-term engraftment tracking)</span><div class="taxa-tags"><span class="tag ctx">Single fresh FMT — microbiome shifts tracked longitudinally</span><span class="tag ctx">Donor-derived taxa persistence over time</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-cohort">Prospective Randomised Pilot</span>
+  <div class="design-desc">Single fresh FMT vs control; long-term follow-up; 16S rRNA longitudinal profiling; safety monitoring; clinical response assessment</div>
+</td>
+<td>
+  <div class="outcome-main">Demonstrated long-term efficacy and safety of single fresh FMT in recurrent UC. Donor microbiome engraftment maintained at follow-up. Supports single-infusion approach for selected patients.</div>
+</td>
+</tr>
+
+<!-- ROW 28 -->
+<tr data-type="UC" data-design="Open-label" data-age="adult">
+<td>
+  <div class="study-authors">Damman et al.</div>
+  <div class="study-journal">PLoS ONE, 2015</div>
+  <div class="study-loc">USA (Seattle)</div>
+  <div class="study-id">PMC4544847</div>
+</td>
+<td>
+  <span class="pop-type pop-uc">UC</span>
+  <div class="pop-n">n = 10</div>
+  <div class="pop-age">Adults</div>
+  <div class="pop-activity">Active</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Contextual (low-level engraftment despite clinical benefit)</span><div class="taxa-tags"><span class="tag ctx">Low-level donor microbiome engraftment</span><span class="tag ctx">Limited diversity transfer</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-ol">Open-label Pilot</span>
+  <div class="design-desc">Single colonoscopic FMT; 16S rRNA engraftment analysis (donor-recipient similarity); clinical response over 4 weeks</div>
+</td>
+<td>
+  <div class="outcome-main">Clinical improvement observed despite low-level microbiome engraftment. Suggests non-microbial mechanisms (metabolic, immune) may mediate FMT effects. Important caveat for engraftment-as-proxy-for-response assumptions.</div>
+</td>
+</tr>
+
+<!-- ROW 29 -->
+<tr data-type="UC" data-design="RCT" data-age="adult">
+<td>
+  <div class="study-authors">Fritsch et al.</div>
+  <div class="study-journal">Clin Gastroenterol Hepatol, 2021</div>
+  <div class="study-loc">USA</div>
+  <div class="study-id">S1542-3565(20)30685-6</div>
+</td>
+<td>
+  <span class="pop-type pop-uc">UC</span>
+  <div class="pop-n">Active UC</div>
+  <div class="pop-age">Adults</div>
+  <div class="pop-activity">Active disease</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Contextual (broad dysbiosis markers improved — no specific taxa)</span><div class="taxa-tags"><span class="tag ctx">Low-fat high-fiber diet → improved dysbiosis score</span><span class="tag ctx">Reduced Proteobacteria (compositional shift)</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-rct">RCT</span>
+  <div class="design-desc">Low-fat, high-fibre diet (LFD) vs improved Standard American Diet (iSAD); 16S rRNA; fecal calprotectin; QoL (IBDQ); dysbiosis index</div>
+</td>
+<td>
+  <div class="outcome-main">LFD reduced markers of inflammation and dysbiosis and improved QoL vs iSAD. Demonstrates dietary fat and fibre as modifiable microbiome modulators in UC without pharmacological intervention.</div>
+</td>
+</tr>
+
+<!-- ROW 30 -->
+<tr data-type="IBD" data-design="Cohort" data-age="adult">
+<td>
+  <div class="study-authors">Lee et al.</div>
+  <div class="study-journal">Gut, 2017</div>
+  <div class="study-loc">Canada / Germany</div>
+  <div class="study-id">PMC5531225</div>
+</td>
+<td>
+  <span class="pop-type pop-ibd">UC + CD</span>
+  <div class="pop-n">Iron-deficient IBD patients</div>
+  <div class="pop-age">Adults</div>
+  <div class="pop-activity">Active + remission; iron-deficient</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Harmful (promoted by oral iron)</span><div class="taxa-tags"><span class="tag neg">Enterobacteriaceae (increased by oral iron)</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Beneficial (suppressed by oral iron)</span><div class="taxa-tags"><span class="tag pos">Lactobacillaceae</span><span class="tag pos">Erysipelotrichaceae</span><span class="tag pos">Bifidobacterium</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Contextual (IV iron — minimal impact)</span><div class="taxa-tags"><span class="tag ctx">IV iron: minimal microbiota effect</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-cohort">Prospective Comparative Cohort</span>
+  <div class="design-desc">Oral vs intravenous iron replacement in IBD; 16S rRNA + metabolomics; longitudinal microbiome tracking; clinical and biochemical endpoints</div>
+</td>
+<td>
+  <div class="outcome-main">Oral iron supplementation promoted dysbiotic shift: increased Enterobacteriaceae, reduced Lactobacillaceae and Bifidobacterium. IV iron had minimal gut microbiota impact. Critical confounding variable for microbiome studies in iron-deficient IBD patients.</div>
+  <div class="outcome-note">KEY CONFOUNDER: Oral iron therapy distorts microbiome measurements</div>
+</td>
+</tr>
+
+<!-- ROW 31 -->
+<tr data-type="UC" data-design="RCT" data-age="adult">
+<td>
+  <div class="study-authors">Wei et al.</div>
+  <div class="study-journal">BMC Microbiol, 2016</div>
+  <div class="study-loc">China (Nanjing)</div>
+  <div class="study-id">PMC5095982</div>
+</td>
+<td>
+  <span class="pop-type pop-uc">UC</span>
+  <div class="pop-n">n = 14 (FMT+pectin vs FMT alone)</div>
+  <div class="pop-age">Adults</div>
+  <div class="pop-activity">Active</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Contextual (diversity maintenance — no specific taxa)</span><div class="taxa-tags"><span class="tag ctx">Pectin delayed loss of donor-derived diversity</span><span class="tag ctx">Maintained donor engraftment duration post-FMT</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-rct">Pilot RCT</span>
+  <div class="design-desc">FMT + pectin (dietary fibre substrate) vs FMT alone; 16S rRNA longitudinal tracking; Mayo score; duration of diversity maintenance</div>
+</td>
+<td>
+  <div class="outcome-main">Pectin supplementation post-FMT significantly prolonged microbiome diversity and donor microbiome persistence. Suggests prebiotic support can extend FMT benefit — therapeutic combination strategy.</div>
+</td>
+</tr>
+
+<!-- ROW 32 -->
+<tr data-type="IBD" data-design="Open-label" data-age="adult">
+<td>
+  <div class="study-authors">Facchin et al.</div>
+  <div class="study-journal">Neurogastroenterol Motil, 2020</div>
+  <div class="study-loc">Italy (Padua)</div>
+  <div class="study-id">PMC7583468</div>
+  <div class="companion-note">↑ Companion pilot to Facchin 2026</div>
+</td>
+<td>
+  <span class="pop-type pop-ibd">UC + CD</span>
+  <div class="pop-n">Pilot study</div>
+  <div class="pop-age">Adults</div>
+  <div class="pop-activity">Active + remission</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Beneficial (stimulated by oral butyrate)</span><div class="taxa-tags"><span class="tag pos">Faecalibacterium prausnitzii</span><span class="tag pos">Lachnospiraceae</span><span class="tag pos">Ruminococcus</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Harmful (reduced)</span><div class="taxa-tags"><span class="tag neg">Proteobacteria</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-ol">Open-label Pilot</span>
+  <div class="design-desc">Oral microencapsulated sodium butyrate in IBD; 16S rRNA; preliminary proof-of-concept for Facchin 2026 RCT design</div>
+</td>
+<td>
+  <div class="outcome-main">Proof-of-concept: oral butyrate stimulated butyrogenic taxa and reduced Proteobacteria. Supported the design of the subsequent double-blind RCT (Facchin 2026). Enterotype stratification hypothesis first proposed here.</div>
+</td>
+</tr>
+
+<!-- ROW 33 -->
+<tr data-type="UC" data-design="RCT" data-age="paediatric">
+<td>
+  <div class="study-authors">Pai et al. (PediFETCh)</div>
+  <div class="study-journal">Gastroenterology, 2021</div>
+  <div class="study-loc">Canada (multi-site)</div>
+  <div class="study-id">PIIS0016508521007393</div>
+</td>
+<td>
+  <span class="pop-type pop-uc">UC</span>
+  <div class="pop-n">n = 25</div>
+  <div class="pop-age">Paediatric (4–17 years)</div>
+  <div class="pop-activity">Active (PUCAI ≥10)</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Beneficial (FMT response-associated)</span><div class="taxa-tags"><span class="tag pos">Alistipes spp.</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Harmful (FMT non-response-associated)</span><div class="taxa-tags"><span class="tag neg">Escherichia spp.</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Contextual (diversity)</span><div class="taxa-tags"><span class="tag ctx">β-diversity trended higher in FMT arm</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-rct">Pilot RCT (first paediatric UC FMT RCT)</span>
+  <div class="design-desc">Rectal enema FMT vs saline placebo × 2/week for 6 weeks; 16S rRNA; PUCAI; fecal calprotectin; CRP; post-trial open-label crossover arm</div>
+</td>
+<td>
+  <div class="outcome-main">First pilot RCT of FMT in paediatric UC. 92% composite endpoint (FMT) vs 50% (placebo) at week 6. 75% maintained clinical response at 12 months. Alistipes enrichment associated with response; Escherichia enrichment associated with non-response.</div>
+  <div class="outcome-stat">Composite endpoint: 92% FMT vs 50% placebo (RR 1.8; 95% CI 1.1–3.7)</div>
+</td>
+</tr>
+
+<!-- ROW 34 -->
+<tr data-type="UC" data-design="RCT" data-age="adult">
+<td>
+  <div class="study-authors">Palumbo et al.</div>
+  <div class="study-journal">Biomed Pap, 2016</div>
+  <div class="study-loc">Italy (Palermo)</div>
+  <div class="study-id">BiomedPap 160(3):372</div>
+</td>
+<td>
+  <span class="pop-type pop-uc">UC</span>
+  <div class="pop-n">n = 60</div>
+  <div class="pop-age">Adults (28–71)</div>
+  <div class="pop-activity">Moderate–severe (MMDAI 8–12)</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Beneficial (probiotic strains)</span><div class="taxa-tags"><span class="tag pos">Lactobacillus salivarius</span><span class="tag pos">L. acidophilus</span><span class="tag pos">B. bifidus BGN4</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Harmful (UC background dysbiosis)</span><div class="taxa-tags"><span class="tag neg">Deltaproteobacteria</span><span class="tag neg">Bilophila wadsworthia</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-rct">Open-label RCT (2 years)</span>
+  <div class="design-desc">Mesalazine + probiotic blend (Acronelle: L. salivarius, L. acidophilus, B. bifidus BGN4) vs mesalazine alone; MMDAI at 6, 12, 18, 24 months; endoscopic scoring; longest probiotic trial in this dataset</div>
+</td>
+<td>
+  <div class="outcome-main">Combination maintained significantly lower MMDAI over 24 months vs mesalazine alone. Probiotic effects evident from 18 months. Demonstrated sustained 2-year benefit — longest probiotic trial in this evidence base.</div>
+  <div class="outcome-stat">MMDAI at 24 months: 4.4 ± 0.8 (combination) vs 6.1 ± 2.0 (mesalazine alone); p=0.0001</div>
+</td>
+</tr>
+
+<!-- ROW 35 -->
+<tr data-type="CD" data-design="Cohort" data-age="adult">
+<td>
+  <div class="study-authors">Magro et al.</div>
+  <div class="study-journal">Sci Rep, 2019</div>
+  <div class="study-loc">Brazil (UNICAMP)</div>
+  <div class="study-id">PMC6744406</div>
+</td>
+<td>
+  <span class="pop-type pop-cd">CD</span>
+  <div class="pop-n">Active vs remission comparison</div>
+  <div class="pop-age">Adults</div>
+  <div class="pop-activity">Active (surgery) vs remission</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Contextual (remission associated with mucin-producing microbiota)</span><div class="taxa-tags"><span class="tag ctx">Remission: higher diversity + mucin-producing taxa</span><span class="tag ctx">Active: mucin production reduced, dysbiosis present</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-cohort">Prospective Observational</span>
+  <div class="design-desc">CD active vs remission comparison; 16S rRNA; mucosal biopsy; mucin immunohistochemistry; MUC2 expression analysis</div>
+</td>
+<td>
+  <div class="outcome-main">CD remission associated with altered gut microbiota and significantly increased mucin production. Highlights microbiota–mucin layer axis as key in CD pathogenesis and recovery. Supports mucosal barrier function as an outcome metric.</div>
+</td>
+</tr>
+
+<!-- ROW 36 -->
+<tr data-type="CD" data-design="Open-label" data-age="adult">
+<td>
+  <div class="study-authors">von Martels et al. (RISE-UP)</div>
+  <div class="study-journal">J Crohns Colitis, 2020</div>
+  <div class="study-loc">Netherlands (Groningen)</div>
+  <div class="study-id">PMC7303596</div>
+</td>
+<td>
+  <span class="pop-type pop-cd">CD</span>
+  <div class="pop-n">n = 29</div>
+  <div class="pop-age">Adults</div>
+  <div class="pop-activity">Active + remission</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Contextual (riboflavin-modulated taxa)</span><div class="taxa-tags"><span class="tag ctx">Lachnospiraceae (altered with riboflavin)</span><span class="tag ctx">SCFA production changes</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-ol">Open-label Pilot (RISE-UP)</span>
+  <div class="design-desc">Riboflavin (vitamin B2) supplementation in CD; 16S rRNA; SCFA profiling; CDAI; fecal calprotectin; mechanistic metabolic analysis</div>
+</td>
+<td>
+  <div class="outcome-main">Riboflavin supplementation altered Lachnospiraceae relative abundances and SCFA production profiles. Novel insight: micronutrient supplementation can modulate commensal ecology — relevant as a low-risk adjunct therapy in CD.</div>
+</td>
+</tr>
+
+<!-- ROW 37 -->
+<tr data-type="UC" data-design="RCT" data-age="adult">
+<td>
+  <div class="study-authors">Smith et al.</div>
+  <div class="study-journal">Sci Rep, 2022</div>
+  <div class="study-loc">USA (San Francisco)</div>
+  <div class="study-id">PMC8976058</div>
+</td>
+<td>
+  <span class="pop-type pop-uc">UC</span>
+  <div class="pop-n">RCT analysis</div>
+  <div class="pop-age">Adults</div>
+  <div class="pop-activity">Active</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Contextual (methodological — strain-level engraftment)</span><div class="taxa-tags"><span class="tag ctx">Antibiotic pretreatment disrupted community structure</span><span class="tag ctx">Strain-resolved engraftment analysis</span><span class="tag ctx">Delivery mode affected engraftment efficiency</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-rct">RCT Sub-analysis</span>
+  <div class="design-desc">Strain-resolved shotgun metagenomics of RCT (antibiotic pretreatment + FMT in UC); strain tracking across time-points; donor-recipient strain matching</div>
+</td>
+<td>
+  <div class="outcome-main">Antibiotic pretreatment increased FMT engraftment efficiency. Strain-level data revealed competitive exclusion dynamics between donor and recipient strains. Informs FMT optimisation: donor selection and pretreatment strategy.</div>
+</td>
+</tr>
+
+<!-- ROW 38 -->
+<tr data-type="UC" data-design="Open-label" data-age="adult">
+<td>
+  <div class="study-authors">Jacob et al.</div>
+  <div class="study-journal">Inflamm Bowel Dis, 2017</div>
+  <div class="study-loc">USA (New York)</div>
+  <div class="study-id">PMC6159890</div>
+</td>
+<td>
+  <span class="pop-type pop-uc">UC</span>
+  <div class="pop-n">Open-label cohort</div>
+  <div class="pop-age">Adults</div>
+  <div class="pop-activity">Active</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Contextual (diversity as primary outcome)</span><div class="taxa-tags"><span class="tag ctx">Increased alpha and beta diversity post-FMT</span><span class="tag ctx">Single high-diversity colonoscopic FMT</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-ol">Open-label Single-arm</span>
+  <div class="design-desc">Single high-diversity colonoscopic FMT preparation; 16S rRNA pre/post; safety monitoring; diversity metrics as primary endpoint; clinical response</div>
+</td>
+<td>
+  <div class="outcome-main">Single high-diversity FMT safe and effective at increasing microbial diversity in active UC. Clinical response achieved in majority. Supports diversity as a therapeutic target metric in UC.</div>
+</td>
+</tr>
+
+<!-- ROW 39 -->
+<tr data-type="CD" data-design="Cohort" data-age="adult">
+<td>
+  <div class="study-authors">Mondot et al.</div>
+  <div class="study-journal">Gut, 2016</div>
+  <div class="study-loc">France (GETAID)</div>
+  <div class="study-id">PMC4893116</div>
+</td>
+<td>
+  <span class="pop-type pop-cd">CD</span>
+  <div class="pop-n">n = 28</div>
+  <div class="pop-age">Adults</div>
+  <div class="pop-activity">Post-surgical; remission follow-up</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Contextual (structural robustness as outcome — no taxa named)</span><div class="taxa-tags"><span class="tag ctx">Mucosal microbiota structural robustness</span><span class="tag ctx">Higher stability → longer remission</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-cohort">Prospective Observational</span>
+  <div class="design-desc">Mucosal microbiota profiling at surgical resection + longitudinal post-operative follow-up; 16S rRNA; CDAI; Kaplan-Meier remission analysis; structural robustness index</div>
+</td>
+<td>
+  <div class="outcome-main">Structural robustness and temporal stability of gut mucosal microbiota at time of surgery predicted longer post-surgical remission in CD. Supports resilient microbiome as a therapeutic target — beyond simple composition.</div>
+</td>
+</tr>
+
+<!-- ROW 40 -->
+<tr data-type="CD" data-design="RCT" data-age="paediatric">
+<td>
+  <div class="study-authors">Rohani et al.</div>
+  <div class="study-journal">Microbiologyopen, 2025</div>
+  <div class="study-loc">Iran (Tehran)</div>
+  <div class="study-id">PMC12550864</div>
+</td>
+<td>
+  <span class="pop-type pop-cd">CD</span>
+  <div class="pop-n">Paediatric cohort</div>
+  <div class="pop-age">Paediatric</div>
+  <div class="pop-activity">Active</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Contextual (dietary intervention — both arms shift toward health)</span><div class="taxa-tags"><span class="tag ctx">CDED alone: microbiome shift toward health</span><span class="tag ctx">CDED + PEN: different but also health-directed profile</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-rct">Prospective RCT</span>
+  <div class="design-desc">CDED (Crohn's Disease Exclusion Diet) alone vs CDED + Partial Enteral Nutrition (PEN) in paediatric CD; 16S rRNA; wPCDAI; fecal calprotectin</div>
+</td>
+<td>
+  <div class="outcome-main">Both dietary arms produced health-directed microbiome shifts but with distinct profiles. PEN addition altered the taxa profile significantly from diet alone. Highlights interaction between dietary fibre exclusion and enteral formula on gut ecology.</div>
+</td>
+</tr>
+
+<!-- ROW 41 -->
+<tr data-type="CD" data-design="RCT" data-age="paediatric">
+<td>
+  <div class="study-authors">Suskind et al.</div>
+  <div class="study-journal">Nutrients, 2020</div>
+  <div class="study-loc">USA (Seattle)</div>
+  <div class="study-id">PMC7762109</div>
+</td>
+<td>
+  <span class="pop-type pop-cd">CD</span>
+  <div class="pop-n">n = 18</div>
+  <div class="pop-age">Paediatric</div>
+  <div class="pop-activity">Active (wPCDAI ≥12.5)</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Beneficial (increased with dietary improvement)</span><div class="taxa-tags"><span class="tag pos">Lachnospiraceae</span><span class="tag pos">Ruminococcaceae</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Harmful (reduced with dietary improvement)</span><div class="taxa-tags"><span class="tag neg">Proteobacteria</span><span class="tag neg">Enterobacteriaceae</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-rct">Randomised Diet-controlled Trial</span>
+  <div class="design-desc">SCD vs diet modification as induction therapy; metaproteomic + 16S rRNA analysis (PNNL); wPCDAI; fecal calprotectin; functional protein-level microbial data</div>
+</td>
+<td>
+  <div class="outcome-main">Both diets reduced paediatric CD disease activity. SCD produced greater butyrate-producer enrichment and Proteobacteria suppression. Metaproteomic data confirmed functional microbiome shifts beyond taxonomy.</div>
+</td>
+</tr>
+
+<!-- ROW 42 -->
+<tr data-type="CD" data-design="Cohort" data-age="adult">
+<td>
+  <div class="study-authors">Li et al.</div>
+  <div class="study-journal">Appl Microbiol Biotechnol, 2019</div>
+  <div class="study-loc">China (Nanjing)</div>
+  <div class="study-id">PMC6311185</div>
+</td>
+<td>
+  <span class="pop-type pop-cd">CD</span>
+  <div class="pop-n">Prospective cohort (FMT)</div>
+  <div class="pop-age">Adults</div>
+  <div class="pop-activity">Active; post-first FMT</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Contextual (microbiome stability over time — temporal dynamics)</span><div class="taxa-tags"><span class="tag ctx">Diversity loss over time post-FMT</span><span class="tag ctx">Optimal second FMT window: 6–8 weeks</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-cohort">Prospective Cohort</span>
+  <div class="design-desc">Longitudinal monitoring of post-FMT microbiome dynamics in CD; 16S rRNA; CDAI; optimal timing analysis for repeat FMT; diversity index over time</div>
+</td>
+<td>
+  <div class="outcome-main">Microbiome diversity naturally declines after single FMT. Second FMT at 6–8 weeks post-first optimal to maintain diversity and clinical benefit. Microbiome stability (not just peak diversity) predicts sustained remission.</div>
+</td>
+</tr>
+
+<!-- ROW 43 -->
+<tr data-type="UC" data-design="RCT" data-age="adult">
+<td>
+  <div class="study-authors">Paramsothy et al. (FOCUS)</div>
+  <div class="study-journal">Gastroenterology, 2019</div>
+  <div class="study-loc">Australia (multi-site)</div>
+  <div class="study-id">S0016508518353988</div>
+</td>
+<td>
+  <span class="pop-type pop-uc">UC</span>
+  <div class="pop-n">n = 81</div>
+  <div class="pop-age">Adults</div>
+  <div class="pop-activity">Active (Mayo ≥4)</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Beneficial (enriched in remission)</span><div class="taxa-tags"><span class="tag pos">Eubacterium hallii</span><span class="tag pos">Roseburia inulivorans</span><span class="tag pos">Bacteroides (donor stool)</span><span class="tag pos">SCFA biosynthesis ↑</span><span class="tag pos">Secondary bile acids ↑</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Harmful (enriched in non-remission)</span><div class="taxa-tags"><span class="tag neg">Fusobacterium gonidiaformans</span><span class="tag neg">Sutterella wadsworthensis</span><span class="tag neg">Escherichia spp.</span><span class="tag neg">Streptococcus (donor stool → no response)</span><span class="tag neg">Heme biosynthesis ↑</span><span class="tag neg">LPS biosynthesis ↑</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-rct">Double-blind RCT + Multi-omics</span>
+  <div class="design-desc">Multi-donor FMT (3–7 donors) 5×/week × 8 weeks vs placebo; 314 fecal samples; 16S rRNA + metagenomics + metabolomics; mucosal biopsies (n=160); FOCUS trial secondary analysis</div>
+</td>
+<td>
+  <div class="outcome-main">Remission patients had enrichment of SCFA producers and secondary bile acid synthesis. Non-remission patients had enrichment of LPS/heme producers. Bacteroides in donor predicted response; Streptococcus in donor predicted non-response. Multi-omics approach identified actionable biomarkers for donor selection.</div>
+  <div class="outcome-note">KEY PAPER: Most taxa-specific multi-omics FMT evidence in this dataset</div>
+</td>
+</tr>
+
+<!-- ROW 44 -->
+<tr data-type="CD" data-design="Cohort" data-age="paediatric">
+<td>
+  <div class="study-authors">Sprockett et al.</div>
+  <div class="study-journal">Inflamm Bowel Dis, 2019</div>
+  <div class="study-loc">Multi-site (international)</div>
+  <div class="study-id">PMC7185687</div>
+</td>
+<td>
+  <span class="pop-type pop-cd">CD</span>
+  <div class="pop-n">n = 90 (multiple treatment arms)</div>
+  <div class="pop-age">Paediatric</div>
+  <div class="pop-activity">Active; treatment-naïve or newly treated</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Beneficial (EEN-associated profile)</span><div class="taxa-tags"><span class="tag pos">Ruminococcaceae (EEN-increased)</span><span class="tag pos">Lachnospiraceae (EEN-increased)</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Harmful (EEN-reduced)</span><div class="taxa-tags"><span class="tag neg">Enterobacteriaceae (EEN-reduced)</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Contextual (treatment-modality-specific profiles)</span><div class="taxa-tags"><span class="tag ctx">EEN, partial EN, corticosteroids → distinct microbiome profiles</span><span class="tag ctx">Baseline composition predicts treatment-specific remission</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-cohort">Prospective Multi-site Cohort</span>
+  <div class="design-desc">Multiple treatment arms (EEN, partial EN, corticosteroids, biologics); 16S rRNA baseline + follow-up; wPCDAI; treatment-specific microbiome profiling; Stanford/international sites</div>
+</td>
+<td>
+  <div class="outcome-main">Different IBD treatments produce distinct, treatment-specific microbiome signatures. EEN associated with greatest beneficial taxa enrichment and most remission-associated profile. Baseline microbiome composition predicted which treatment modality would achieve remission — clinically actionable finding.</div>
+</td>
+</tr>
+
+
+<!-- ROW 45 — Sokol 2008 -->
+<tr data-type="CD" data-design="Cohort" data-age="adult">
+<td>
+  <div class="study-authors">Sokol et al.</div>
+  <div class="study-journal">PNAS, 2008</div>
+  <div class="study-loc">France (multi-site)</div>
+  <div class="study-id">doi:10.1073/pnas.0804812105</div>
+</td>
+<td>
+  <span class="pop-type pop-cd">CD</span>
+  <div class="pop-n">n = 315 (post-surgical)</div>
+  <div class="pop-age">Adults</div>
+  <div class="pop-activity">Post-operative; relapse follow-up</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Beneficial (depleted in relapse; anti-inflammatory)</span><div class="taxa-tags"><span class="tag pos">Faecalibacterium prausnitzii</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Contextual (expansion in relapse)</span><div class="taxa-tags"><span class="tag ctx">Enterobacteriaceae (expanded in CD relapse)</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-cohort">Prospective Cohort + In vitro</span>
+  <div class="design-desc">Ileal biopsy microbiota profiling at surgical resection; prospective follow-up at 6 months; CARD15/NOD2 genotyping; F. prausnitzii supernatant anti-inflammatory assay (in vitro, NF-κB); CDAI; fecal calprotectin</div>
+</td>
+<td>
+  <div class="outcome-main">Low mucosal F. prausnitzii at time of surgery independently predicted 6-month post-operative relapse (OR 4.93, 95% CI 1.43–16.9). F. prausnitzii supernatant reduced NF-κB activation and IL-8 secretion in vitro. Landmark paper establishing F. prausnitzii as the most cited beneficial IBD commensal.</div>
+  <div class="outcome-stat">Low F. prausnitzii → relapse OR = 4.93 (95% CI: 1.43–16.9)</div>
+  <div class="outcome-note">FOUNDATIONAL PAPER — most cited F. prausnitzii human study</div>
+</td>
+</tr>
+
+<!-- ROW 46 — Lopez-Siles 2015 -->
+<tr data-type="IBD" data-design="Cross-sectional" data-age="adult">
+<td>
+  <div class="study-authors">Lopez-Siles et al.</div>
+  <div class="study-journal">Appl Environ Microbiol, 2015</div>
+  <div class="study-loc">Spain (Girona)</div>
+  <div class="study-id">doi:10.1128/AEM.03131-14</div>
+</td>
+<td>
+  <span class="pop-type pop-ibd">UC + CD</span>
+  <div class="pop-n">n = 84 IBD + 49 controls</div>
+  <div class="pop-age">Adults</div>
+  <div class="pop-activity">Active + remission vs healthy controls</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Beneficial (reduced in both UC and CD)</span><div class="taxa-tags"><span class="tag pos">F. prausnitzii phylotype I (associated with colonic CD and UC)</span><span class="tag pos">F. prausnitzii phylotype II (associated with ileal CD)</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Contextual (phylotype-location specificity)</span><div class="taxa-tags"><span class="tag ctx">Phylotype distribution varies by disease location and type</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-xsec">Cross-sectional</span>
+  <div class="design-desc">Mucosal biopsy + fecal samples; F. prausnitzii phylotype-specific qPCR; disease location Montreal classification; 16S rRNA; UC, CD (ileal vs colonic) vs healthy controls compared</div>
+</td>
+<td>
+  <div class="outcome-main">F. prausnitzii phylotype richness significantly reduced in both UC and CD compared to controls. Distinct phylotypes associated with different disease locations — phylotype I predominant in colonic CD and UC; phylotype II in ileal CD. Demonstrates intra-species heterogeneity within a beneficial commensal — strain-level variation matters.</div>
+  <div class="outcome-note">KEY: F. prausnitzii phylotype composition differs by IBD subtype and location</div>
+</td>
+</tr>
+
+<!-- ROW 47 — Aharoni-Frutkoff 2025 (TASTI-MM) -->
+<tr data-type="CD" data-design="RCT" data-age="paediatric">
+<td>
+  <div class="study-authors">Aharoni-Frutkoff et al. (TASTI-MM)</div>
+  <div class="study-journal">Gastroenterology, 2025</div>
+  <div class="study-loc">Israel / Multi-site (international)</div>
+  <div class="study-id">S0016-5085(25)00896-0</div>
+</td>
+<td>
+  <span class="pop-type pop-cd">CD</span>
+  <div class="pop-n">n = 83 (41 T&amp;H; 42 EEN)</div>
+  <div class="pop-age">Paediatric / young adults (6–25 years)</div>
+  <div class="pop-activity">Mild–moderate active; biologic-naïve</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Beneficial (increased with whole-food diet)</span><div class="taxa-tags"><span class="tag pos">Ruminococcaceae (increased both arms)</span><span class="tag pos">F. prausnitzii (increased both arms)</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Harmful (reduced with whole-food diet)</span><div class="taxa-tags"><span class="tag neg">Proteobacteria (reduced both arms)</span><span class="tag neg">Enterobacteriaceae (reduced both arms)</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Contextual (similar microbiome trajectories — both dietary arms)</span><div class="taxa-tags"><span class="tag ctx">T&amp;H and EEN produced comparable microbiome shifts</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-rct">Clinician-blinded RCT</span>
+  <div class="design-desc">Tasty &amp; Healthy (T&amp;H) whole-food diet (excludes processed food, gluten, red meat, dairy) vs exclusive enteral nutrition (EEN) × 8 weeks; weekly dietary support; wPCDAI/CDAI; MINI index (mucosal healing); fecal calprotectin; CRP; ESR; 16S rRNA microbiome; tolerability by interview + intake diary</div>
+</td>
+<td>
+  <div class="outcome-main">88% tolerated T&amp;H vs lower EEN tolerability (primary endpoint met). Both diets achieved comparable clinical remission and microbiome shifts toward beneficial taxa. T&amp;H significantly more tolerable than EEN with equivalent clinical efficacy — supports whole-food dietary approach as a palatable alternative for paediatric CD induction.</div>
+  <div class="outcome-stat">Tolerability: 88% T&amp;H; comparable remission rates between arms</div>
+  <div class="outcome-note">Resolves the previously paywalled S0016-5085(25)00896-0 study</div>
+</td>
+</tr>
+
+<!-- ROW 48 — Schult-Hannemann 2026 -->
+<tr data-type="IBD" data-design="Cross-sectional" data-age="adult">
+<td>
+  <div class="study-authors">Schult-Hannemann et al.</div>
+  <div class="study-journal">Inflamm Bowel Dis, 2026</div>
+  <div class="study-loc">Germany (multi-site)</div>
+  <div class="study-id">doi:10.1093/ibd/izaf...</div>
+</td>
+<td>
+  <span class="pop-type pop-ibd">UC + CD</span>
+  <div class="pop-n">IBD patients vs controls</div>
+  <div class="pop-age">Adults</div>
+  <div class="pop-activity">Active + remission</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Harmful (increased in IBD — opportunistic pathobiont)</span><div class="taxa-tags"><span class="tag neg">Pseudomonas spp. (increased in IBD mucosal sites)</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Contextual (site-specific detection)</span><div class="taxa-tags"><span class="tag ctx">Pseudomonas elevation greater in mucosal vs fecal samples</span><span class="tag ctx">Different microbiota profiles across sampling sites in IBD</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-xsec">Cross-sectional (Multi-site Comparison)</span>
+  <div class="design-desc">Comparison of microbiota across multiple sampling sites (fecal, mucosal biopsy, lavage) in IBD vs controls; 16S rRNA; Pseudomonas-specific analysis; site-resolved microbiome profiling</div>
+</td>
+<td>
+  <div class="outcome-main">Pseudomonas species significantly more prevalent in IBD gut mucosa compared to controls and compared to fecal samples — indicating mucosal invasion or colonisation in IBD. Adds Pseudomonas as a new harmful commensal signal not previously prominent in this evidence base. Reinforces the sampling method as critical determinant of taxa detected.</div>
+  <div class="outcome-note">Pseudomonas: new harmful taxon signal; most prominent in mucosal samples</div>
+</td>
+</tr>
+
+<!-- ROW 49 — Svolos 2019 (CD-TREAT) -->
+<tr data-type="CD" data-design="RCT" data-age="adult">
+<td>
+  <div class="study-authors">Svolos et al. (CD-TREAT)</div>
+  <div class="study-journal">Gastroenterology, 2019</div>
+  <div class="study-loc">UK (Glasgow)</div>
+  <div class="study-id">doi:10.1053/j.gastro.2019.04.020</div>
+</td>
+<td>
+  <span class="pop-type pop-cd">CD</span>
+  <div class="pop-n">n = 73 (CD-TREAT n=25; EEN n=11; + healthy arm)</div>
+  <div class="pop-age">Adults + paediatric</div>
+  <div class="pop-activity">Active (Harvey-Bradshaw Index ≥5)</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Beneficial (increased with CD-TREAT and EEN)</span><div class="taxa-tags"><span class="tag pos">F. prausnitzii</span><span class="tag pos">Ruminococcaceae</span><span class="tag pos">Lachnospiraceae</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Harmful (reduced with both dietary interventions)</span><div class="taxa-tags"><span class="tag neg">Proteobacteria</span><span class="tag neg">Enterobacteriaceae</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Contextual (CD-TREAT ≈ EEN microbiome shift)</span><div class="taxa-tags"><span class="tag ctx">Ordinary food-based diet replicates EEN microbiome and clinical effect</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-rct">RCT + Crossover Mechanistic Study</span>
+  <div class="design-desc">CD-TREAT diet (food-based replication of EEN nutritional profile) vs EEN × 8 weeks in adults; healthy volunteer crossover arm; 16S rRNA + metabolomics; Harvey-Bradshaw Index; fecal calprotectin; CRP</div>
+</td>
+<td>
+  <div class="outcome-main">CD-TREAT diet produced microbiome shifts indistinguishable from EEN and equivalent clinical remission rates. Beneficial taxa enriched and Proteobacteria reduced in both arms. Establishes that EEN's microbiome-modifying and therapeutic effects can be replicated with ordinary food, removing the formula dependency. Directly supports dietary exclusion (processed food, emulsifiers) as the therapeutic mechanism.</div>
+  <div class="outcome-stat">Clinical remission: CD-TREAT comparable to EEN; microbiome shifts not significantly different</div>
+</td>
+</tr>
+
+<!-- ROW 50 — Cox 2020 (Low FODMAP in IBD) -->
+<tr data-type="IBD" data-design="RCT" data-age="adult">
+<td>
+  <div class="study-authors">Cox et al.</div>
+  <div class="study-journal">Gastroenterology, 2020</div>
+  <div class="study-loc">UK (London)</div>
+  <div class="study-id">PMC (doi:10.1053/j.gastro.2019.09.024)</div>
+</td>
+<td>
+  <span class="pop-type pop-ibd">UC + CD</span>
+  <div class="pop-n">n = 52 (27 IBD; 25 healthy)</div>
+  <div class="pop-age">Adults</div>
+  <div class="pop-activity">Quiescent IBD</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Conditional (reduced by low FODMAP — unintended effect)</span><div class="taxa-tags"><span class="tag cond">Bifidobacterium (significantly reduced by low FODMAP diet)</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Contextual (overall microbiome shifts — quiescent IBD)</span><div class="taxa-tags"><span class="tag ctx">Low FODMAP: reduced fecal SCFA and prebiotic substrate availability</span><span class="tag ctx">Symptom improvement without corresponding inflammation reduction</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-rct">Randomised Controlled Trial</span>
+  <div class="design-desc">Low FODMAP diet vs habitual diet in quiescent IBD + healthy controls; 4 weeks; 16S rRNA (V4 region); fecal calprotectin; IBDQ; symptom questionnaires; SCFA profiling</div>
+</td>
+<td>
+  <div class="outcome-main">Low FODMAP diet improved gastrointestinal symptoms in quiescent IBD but significantly reduced Bifidobacterium abundance — a potentially undesirable effect given Bifidobacterium's beneficial immunomodulatory role. No significant effect on fecal calprotectin. Important finding: a clinically recommended dietary intervention for symptom management simultaneously suppresses a beneficial commensal. Illustrates trade-off between symptom control and microbiome health.</div>
+  <div class="outcome-note">KEY: Low FODMAP reduces Bifidobacterium — symptom vs microbiome trade-off</div>
+</td>
+</tr>
+
+<!-- ROW 51 — Hansen 2020 (B. thetaiotaomicron / Thetanix) -->
+<tr data-type="CD" data-design="RCT" data-age="paediatric">
+<td>
+  <div class="study-authors">Hansen et al.</div>
+  <div class="study-journal">Clin Transl Gastroenterol, 2020</div>
+  <div class="study-loc">UK / multi-site</div>
+  <div class="study-id">PMC (doi:10.14309/ctg)</div>
+</td>
+<td>
+  <span class="pop-type pop-cd">CD</span>
+  <div class="pop-n">n = 17</div>
+  <div class="pop-age">Paediatric</div>
+  <div class="pop-activity">Active CD (PCDAI ≥15)</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Conditional (live biotherapeutic — beneficial at correct dose)</span><div class="taxa-tags"><span class="tag cond">Bacteroides thetaiotaomicron (Thetanix — engineered strain)</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Contextual (safety/tolerability first-in-paediatric)</span><div class="taxa-tags"><span class="tag ctx">B. thetaiotaomicron safe and tolerable in paediatric CD</span><span class="tag ctx">Dose-dependent colonisation confirmed</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-rct">Double-blind Phase 1b RCT</span>
+  <div class="design-desc">Thetanix (B. thetaiotaomicron engineered live biotherapeutic) vs placebo × 4 weeks; dose escalation; PCDAI; fecal calprotectin; safety monitoring; fecal microbiome engraftment analysis; first-in-paediatric-CD live biotherapeutic trial</div>
+</td>
+<td>
+  <div class="outcome-main">B. thetaiotaomicron was safe and tolerable in paediatric CD with dose-dependent colonisation confirmed. Proof of concept for Bacteroides species as a targeted live biotherapeutic in IBD. Trends toward clinical improvement observed but study not powered for efficacy. Establishes safety profile for a conditionally beneficial Bacteroides strain distinct from the pathogenic potential reported in other contexts.</div>
+</td>
+</tr>
+
+<!-- ROW 52 — Groeger 2013 (B. infantis 35624) -->
+<tr data-type="UC" data-design="RCT" data-age="adult">
+<td>
+  <div class="study-authors">Groeger et al.</div>
+  <div class="study-journal">Gut Microbes, 2013</div>
+  <div class="study-loc">Ireland (Cork)</div>
+  <div class="study-id">doi:10.4161/gmic.23839</div>
+</td>
+<td>
+  <span class="pop-type pop-uc">UC</span>
+  <div class="pop-n">n = 22 UC + 22 healthy</div>
+  <div class="pop-age">Adults</div>
+  <div class="pop-activity">Active UC (mild–moderate)</div>
+</td>
+<td>
+  <div class="taxa-group"><span class="taxa-label">Beneficial (anti-inflammatory probiotic strain)</span><div class="taxa-tags"><span class="tag pos">Bifidobacterium infantis 35624 (Bifantis)</span></div></div>
+  <div class="taxa-group"><span class="taxa-label">Contextual (systemic immune effects beyond gut)</span><div class="taxa-tags"><span class="tag ctx">Reduced systemic CRP, TNF-α and IL-6 in UC patients</span><span class="tag ctx">No significant effect on healthy volunteers — host-state dependent</span></div></div>
+</td>
+<td>
+  <span class="design-badge badge-rct">Double-blind RCT</span>
+  <div class="design-desc">B. infantis 35624 (10¹⁰ CFU/day) vs placebo × 6–8 weeks; serum CRP, TNF-α, IL-6, IL-10; Mayo score; mechanistic immunological assays (dendritic cell and T-cell profiling); human cross-over cohort</div>
+</td>
+<td>
+  <div class="outcome-main">B. infantis 35624 significantly reduced CRP, TNF-α, and IL-6 in UC patients but had no significant effect in healthy volunteers — demonstrating host-disease-state-dependent anti-inflammatory action. Provides mechanistic human evidence that Bifidobacterium modulates systemic inflammation beyond the gut, and that this effect is conditional on the host inflammatory context. Directly supports the conditional classification of Bifidobacterium.</div>
+  <div class="outcome-stat">CRP reduced in UC (p&lt;0.05); no effect in healthy controls</div>
+  <div class="outcome-note">KEY: Anti-inflammatory effect conditional on host disease state — healthy vs UC</div>
+</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+<div class="scroll-hint">← Scroll horizontally to view all columns →</div>
+
+<div style="padding: 20px 36px; background: var(--navy); color: #ccc; font-size: 11px; margin-top: 8px;">
+  <strong style="color:#fff;">Notes:</strong> HC = healthy controls; FMT = faecal microbiota transplantation; UC = ulcerative colitis; CD = Crohn's disease; IBD = inflammatory bowel disease; EEN = exclusive enteral nutrition; F/B = Firmicutes/Bacteroidota ratio; SCFA = short-chain fatty acids; LPS = lipopolysaccharide; MMDAI = Modified Mayo Disease Activity Index; PUCAI = Paediatric UC Activity Index; wPCDAI = weighted Paediatric CD Activity Index; CDAI = CD Activity Index; SCCAI = Simple Clinical Colitis Activity Index; IBDQ = IBD Questionnaire; DMM = Dirichlet-Multinomial Mixture; SGB = Species-level Genome Bins; AUC = area under the curve.
+  <br><br>
+  Papers excluded from this table (outside IBD scope): Osaka et al. 2017 (murine model); Zhou et al. 2024 (peritoneal dialysis); Hou et al. 2024 (allergic rhinitis); Chen et al. 2023/PMC9849685 (mycobiome only); Dong et al. 2024 (chronic kidney disease); Visuthranukul 2024 (obesity); Chen et al. 2023/PMC9922700 (T2DM). Paper S0016-5085(25)00896-0 (Gastroenterology 2025) remains paywalled.
+</div>
+
+<script>
+const activeDT = {type:'all', design:'all', age:'all'};
+function filter(dim, val){
+  const btns = document.querySelectorAll(`.filter-btn[onclick*="'${dim}'"]`);
+  btns.forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  activeDT[dim] = val;
+  applyFilters();
+}
+function applyFilters(){
+  const rows = document.querySelectorAll('#evidence-table tbody tr');
+  let count = 0;
+  rows.forEach(row => {
+    const t = row.dataset.type;
+    const d = row.dataset.design;
+    const a = row.dataset.age;
+    const show = (activeDT.type === 'all' || t === activeDT.type) &&
+                 (activeDT.design === 'all' || d === activeDT.design) &&
+                 (activeDT.age === 'all' || a === activeDT.age);
+    row.classList.toggle('hidden', !show);
+    if(show) count++;
+  });
+  document.getElementById('result-count').textContent = count;
+}
+</script>
+
+
+</body></html>
